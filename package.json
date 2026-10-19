@@ -1,0 +1,64 @@
+{
+  "name": "dsh-subagent-gemini",
+  "version": "0.1.0",
+  "displayName": "Gemini 子智能体",
+  "description": "Run the Google Gemini CLI as a one-shot coding subagent in DeepSeek Harness: a subagent_gemini delegation tool over the Agent Client Protocol, with Gemini CLI discovery, config validation and credential guidance.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./config": "./lib/config.js",
+    "./resolve": "./lib/resolve.js",
+    "./auth": "./lib/auth.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node --test --test-force-exit \"test/**/*.test.mjs\"",
+    "smoke": "node scripts/smoke.mjs",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "gemini",
+    "google-gemini",
+    "gemini-cli",
+    "subagent",
+    "delegation",
+    "acp",
+    "agent-client-protocol",
+    "coding-agent",
+    "cli"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "manifestVersion": 1
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-subagent-acp": "0.2.1-rc.2",
+    "@deepseek-ai/schemastery": "~3.18.5"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5",
+    "@deepseek-ai/dsh-session": "0.2.1-rc.2",
+    "@deepseek-ai/dsh-subagent": "0.2.1-rc.2",
+    "@deepseek-ai/dsh-subprocess": "0.2.1-rc.2"
+  }
+}

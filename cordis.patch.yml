@@ -1,0 +1,17 @@
+# Profile layer of dsh-subagent-gemini.
+#
+# One provider row (this package: Gemini CLI discovery + config + credential
+# guidance, mounted on DSH's official ACP subagent backend) and one model-facing
+# delegation tool row (`subagent_gemini`, the generic tool over `ctx.subagents`).
+#
+# The shape matches the official Codex subagent bundle, so enabling/disabling
+# this layer registers/removes the tool exactly the same way.
+- insert:
+    - id: subagent-gemini
+      name: 'dsh-subagent-gemini'
+    - id: tool-subagent-gemini
+      name: '@deepseek-ai/dsh-tool-subagent'
+      config:
+        provider: gemini
+        toolName: subagent_gemini
+        maxDepth: provider-managed
