@@ -1,16 +1,11 @@
-# DSH 插件市场收录条目（提交到 awesome-dsh-plugin 时使用）
+# DSH 插件市场收录条目（awesome-dsh-plugin data/plugins/<owner>__<repo>.yml）
 #
-# 提交方式：向上游仓库提 PR，新增一个文件：
-#   data/plugins/<owner>__<repo>.yml
-# 文件名例：siyao__dsh-subagent-gemini.yml（owner/repo 用 __ 连接）
-#
-# 注意：
-#   - url 必须与 GitHub 仓库地址完全一致；
-#   - description.en 必填、以句号结尾；description 里出现 “: ”（冒号+空格）必须加引号；
-#   - category 选最贴近的分类：本插件提供模型可调用的委派工具 → tools。
-url: https://github.com/YOUR_GITHUB_NAME/dsh-subagent-gemini
-name: YOUR_GITHUB_NAME/dsh-subagent-gemini
+# 提交方式：向上游仓库提 PR，新增一个文件 data/plugins/PipeDream941__dsh-subagent-gemini.yml
+# 注意：仓库需创建满 1 天（CI 自动检查）、已加 dsh-plugin topic、package.json 含 dsh.bundle。
+url: https://github.com/PipeDream941/dsh-subagent-gemini
+name: PipeDream941/dsh-subagent-gemini
 category: tools
+tarball: https://github.com/PipeDream941/dsh-subagent-gemini/releases/latest/download/dsh-subagent-gemini-0.1.0.tgz
 description:
-  en: "Runs the Google Gemini CLI as a one-shot coding subagent over the Agent Client Protocol and exposes it as the subagent_gemini delegation tool."
-  zh: "把 Google Gemini CLI 作为一次性编码子智能体接入 DeepSeek Harness，提供 subagent_gemini 委派工具。"
+  en: "Runs the official Google Gemini CLI as a one-shot coding subagent over the Agent Client Protocol, exposed as the subagent_gemini delegation tool, with CLI discovery and credential guidance."
+  zh: "把 Google 官方 Gemini CLI 作为一次性编码子智能体接入 DeepSeek Harness（ACP 协议），提供 subagent_gemini 委派工具，含 CLI 自动发现与凭据引导。"
