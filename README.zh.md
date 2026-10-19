@@ -2,14 +2,14 @@
 description: "Gemini 子智能体：把 Google Gemini CLI 作为 DeepSeek Harness 的一次性编码子智能体（subagent_gemini 委派工具）。"
 kind: "package-bundle"
 ---
+
+# dsh-subagent-gemini
+
 > **发布状态：暂未发布到 npm / DSH 插件市场。**
 > Gemini CLI 目前尚未提供 Gemini 4，且本插件需要用户自备 Gemini API key 才能完成端到端验证；
 > 在验证通过前不提交市场收录，避免把未经验证的插件放给用户。代码、测试与 CI 均已就绪，验证后可发布。
 >
 > 想用 Gemini 4 请安装 [`dsh-subagent-antigravity`](https://github.com/PipeDream941/dsh-subagent-antigravity)。
-
-
-# dsh-subagent-gemini
 
 [English](README.md) | 中文
 
